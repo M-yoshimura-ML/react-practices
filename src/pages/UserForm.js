@@ -1,6 +1,7 @@
 import AddUser from "../components/User/AddUser";
 import UserList from "../components/User/UserList";
 import { useState } from "react";
+import React from "react";
 
 const UserForm = () => {
     const [usersList, setUsersList] = useState([]);
@@ -15,10 +16,10 @@ const UserForm = () => {
     }
 
     return (
-        <div>
+        <React.Fragment>
             <AddUser onAddUser={addUserHandler} />
             <UserList users={usersList} />
-        </div>
+        </React.Fragment>
     )
 }
 
